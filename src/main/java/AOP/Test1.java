@@ -8,7 +8,7 @@ public class Test1 {
                 new AnnotationConfigApplicationContext(MyConfig.class);
         UniLibrary unilibrary = context.getBean("uniLibrary", UniLibrary.class);
         unilibrary.getBook("Думай как математик");
-        //unilibrary.getMagazine();
+        unilibrary.getMagazine(22);
         //unilibrary.returnBook();
 
 
