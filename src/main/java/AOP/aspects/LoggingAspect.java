@@ -80,7 +80,7 @@ public class LoggingAspect {
                 if(obj instanceof Book){
                     Book myBook = (Book) obj;
                     System.out.println("Информация о книге: название книги -"
-                            + myBook.getName()+"author-"
+                            + myBook.getName()+" " + "author-"
                             + myBook.getAuthor()+", год издания -  "
                             + myBook.getYearOfPublication());
                 }
