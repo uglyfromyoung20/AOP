@@ -17,10 +17,10 @@ try {
 
    targetMethodResult = proceedingJoinPoint.proceed(); //вызов таргет метода
 } catch(Exception e){
-    System.out.println("aroundReturnBookLoggingAdvice: было поймано исключение " + e );
-    targetMethodResult = "Неизвестное название книги ";
+    System.out.println("aroundReturnBookLoggingAdvice: было обнаружено исключение " + e );
+  throw e;
 }
-        targetMethodResult = "Затеряный мир";
+
 
         System.out.println("aroundReturnBookLoggingAdvice: В библиотеку успешно вернули  книгу");
 
