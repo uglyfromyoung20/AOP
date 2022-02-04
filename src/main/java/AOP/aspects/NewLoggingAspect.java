@@ -13,9 +13,10 @@ public class NewLoggingAspect {
         System.out.println("aroundReturnBookLoggingAdvice: В библиотеку пытаются вернуть книгу ");
         long begin = System.currentTimeMillis();
         Object targetMethodResult = proceedingJoinPoint.proceed(); //вызов таргет метода
+        targetMethodResult = "Затеряный мир";
         long end = System.currentTimeMillis();
         System.out.println("aroundReturnBookLoggingAdvice: В библиотеку успешно вернули  книгу");
-        System.out.println("aroundReturnBookLoggingAdvice: метод returnBook выполнил работу за " + (end-begin) + "миллисекунд ");
+        System.out.println("aroundReturnBookLoggingAdvice: метод returnBook выполнил работу за " + (end-begin) + " " + "миллисекунд ");
         return targetMethodResult;
     }
 }
